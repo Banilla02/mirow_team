@@ -30,21 +30,14 @@ for i in range(15):
       v3=v3-v1
 
     v1=v1//2
-#알고리즘 시작
-v4=random.randint(0, 4)
-v5=random.randint(0, 4)
-l4=(v4,v5)
-v6=1
-l5=[]
 
-while l4!=(v4,v5) or v6==1:
-  l5.append([v4,v5])
-  l6=[]
-  for i in range(2):
-    for i2 in range(2):
-      if 0<=v4-1+2*i<=4 and 0<=v4-1+2*i2<=4 and [v4-1+2*i,v4-1+2*i2] not in l5:
-        l6.append([v4-1+2*i,v4-1+2*i2])
-  if len(l6)!=0:
-    pass
-  else:
-    v6=0
+random_v1 = range(5)
+l7 = [0,1,2,3,4]
+random_v2 = random.choices(random_v1,k=2)
+
+l8 = []
+l9 = []
+
+l8.append(random_v2)
+print(l8)
+l8
