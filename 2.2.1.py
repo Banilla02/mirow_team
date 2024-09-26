@@ -45,17 +45,18 @@ l9.append([l8[-1][0]+1,l8[-1][1]])
 l9.append([l8[-1][0]-1,l8[-1][1]])
 print(l8)
 print(l9)
-l9_Copy = l9
+l9_Copy = []
 Numl9 = len(l9)
-def start_list_remove() :
+def start_list_remove():
   for i in range(Numl9):
     if l9[i][0] > 4 or l9[i][1] > 4:
-      print(l9_Copy[i])
-      l9_Copy[i].remove(l9[i])
+      l9_Copy.append(l9[i])
     elif l9[i][0] < 0 or l9[i][1] < 0:
       print(l9[i])
-      l9_Copy[i].remove(l9[i])
+      l9_Copy.append(l9[i])
+  l9.remove(l9_Copy)
 
 start_list_remove()
 
 print(l9_Copy)
+print(l9)
