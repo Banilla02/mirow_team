@@ -31,13 +31,3 @@ for i in range(15):
 
     v1=v1//2
 
-random_v1 = range(5)
-l7 = [0,1,2,3,4]
-random_v2 = random.choices(random_v1,k=2)
-
-l8 = []
-l9 = []
-
-l8.append(random_v2)
-print(l8)
-l8
