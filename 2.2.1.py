@@ -54,33 +54,34 @@ l9.append([l8[-1][0]-1,l8[-1][1]])
 print(l8)
 print(l9)
 
-def start_list_remove(list_1):
+def start_list_remove(list_1,list_2):
   for i in range(len(list_1)):
     if list_1[i][0] > 4 or list_1[i][1] > 4:
       To_remove.append(list_1[i])
     elif list_1[i][0] < 0 or list_1[i][1] < 0:
       To_remove.append(list_1[i])
     for j in range(len(l8)):
-      if list_1[i][0] == l8[j][0] and list_1[i][1] == l8[j][1]:
+      if list_1[i][0] == list_2[j][0] and list_1[i][1] == list_2[j][1]:
         To_remove.append(list[i])
 
   for item in To_remove:
-    l9.remove(item)
+    list_1.remove(item)
   To_remove.clear
 
-start_list_remove(l9)
-print(l8)
+start_list_remove(l9,l8)
+random_v3 = random.choice(l9)
 print(l9)
-print(To_remove)
-random_v3.extend(random.choice(l9))
 print(random_v3)
-l10.append([random_v3[-1][0],random_v3[-1][1]+1])
-l10.append([random_v3[-1][0],random_v3[-1][1]-1])
-l10.append([random_v3[-1][0]+1,random_v3[-1][1]])
-l10.append([random_v3[-1][0]-1,random_v3[-1][1]])
+l10.append([random_v3[0],random_v3[1]+1])
+l10.append([random_v3[0],random_v3[1]-1])
+l10.append([random_v3[0]+1,random_v3[1]])
+l10.append([random_v3[0]-1,random_v3[1]])
 print(l10)
-random_v1 = range(len(l9))
-random_v2 = random.choice(random_v1,k=1)
-l8[random_v2]
+start_list_remove(l10,l9)
+print(l10)
+for i in l10:
+  if l8 in l10:
+    l11.append(i)
+print(l11)
 
 
