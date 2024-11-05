@@ -48,22 +48,18 @@ def start_list_remove(list_1,list_2):
 def Direct_inform(list_1,list_2):
   if list_1[0] == list_2[0]:
     if list_1[1]-1 == list_2[1]:
-      print('서')
       l2[random_v3[0]][random_v3[1]] = l2[random_v3[0]][random_v3[1]] - 2
       l2[random_v4[0]][random_v4[1]] = l2[random_v4[0]][random_v4[1]] - 8
 
     elif list_1[1]+1 == list_2[1]:
-      print('동')
       l2[random_v3[0]][random_v3[1]] = l2[random_v3[0]][random_v3[1]] - 8
       l2[random_v4[0]][random_v4[1]] = l2[random_v4[0]][random_v4[1]] - 2
 
   elif list_1[0]-1 == list_2[0]:
-    print('북')
     l2[random_v3[0]][random_v3[1]] = l2[random_v3[0]][random_v3[1]] - 1
     l2[random_v4[0]][random_v4[1]] = l2[random_v4[0]][random_v4[1]] - 4
 
   elif list_1[0]+1 == list_2[0]:
-    print('남')
     l2[random_v3[0]][random_v3[1]] = l2[random_v3[0]][random_v3[1]] - 4
     l2[random_v4[0]][random_v4[1]] = l2[random_v4[0]][random_v4[1]] - 1
 
@@ -78,7 +74,7 @@ def remove_Re(data):
 random_v1 = range(5)
 random_v2 = random.choices(random_v1,k=2)
 PastWay.append(random_v2)
-print("star_point :",random_v2)
+print("start_point :",random_v2)
 
 while True:
   PassingWay.append([PastWay[-1][0],PastWay[-1][1]+1])
@@ -87,10 +83,10 @@ while True:
   PassingWay.append([PastWay[-1][0]-1,PastWay[-1][1]])
   start_list_remove(PassingWay,PastWay)
   remove_Re(PassingWay)
-  print(PassingWay)
   
-  if not any(15 in sublist for sublist in l2):
-    for i in range(4):
+  if not PassingWay:
+    print("end_point :",PastWay[-1])
+    for i in range(5):
       print(l2[i])
     break
 
@@ -115,4 +111,3 @@ while True:
   Direct_inform(random_v3,random_v4)
   PastWay.append(random_v3)
   PassingWay.remove(random_v3)
-  print(PastWay)
