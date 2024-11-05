@@ -88,10 +88,12 @@ while True:
   start_list_remove(PassingWay,PastWay)
   remove_Re(PassingWay)
   print(PassingWay)
-  for i in range(5):
-    print(l2[i])
-  if 15 in l2:
+  
+  if not any(15 in sublist for sublist in l2):
+    for i in range(4):
+      print(l2[i])
     break
+
 #앞으로 나아갈 방향 정하기
   random_v3 = []
   random_v3 = random.choice(PassingWay)
@@ -114,8 +116,3 @@ while True:
   PastWay.append(random_v3)
   PassingWay.remove(random_v3)
   print(PastWay)
-print(l2[0])
-print(l2[1])
-print(l2[2])
-print(l2[3])
-print(l2[4])
