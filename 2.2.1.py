@@ -111,3 +111,20 @@ while True:
   Direct_inform(random_v3,random_v4)
   PastWay.append(random_v3)
   PassingWay.remove(random_v3)
+  
+#미로 맵 시각화 하기
+#11*11map
+real_map = []
+O11= ['0','0','0','0','0','0','0','0','0','0','0']
+for i in range(11):
+  real_map.append(O11)
+
+for i in range(0,5,1):
+  print(i)
+  for j in range(0,5,1):
+    print(j)
+    real_map[i*2+1][j*2+1] = l2[i][j]
+  
+
+for i in range(len(real_map)):
+  print(real_map[i])
